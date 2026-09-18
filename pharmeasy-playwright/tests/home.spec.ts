@@ -1,0 +1,1 @@
+import{test,expect}from'../fixtures/test-fixtures';test('@smoke TC01 homepage',async({homePage})=>{await homePage.open();await expect(homePage.page).toHaveURL(/pharmeasy\.in/);await expect(homePage.page.locator('body')).toContainText(/PharmEasy/i)});test('@regression TC02 login option',async({homePage})=>{await homePage.open();await expect(homePage.loginButton).toBeVisible()});
